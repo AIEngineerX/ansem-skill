@@ -73,10 +73,9 @@ Prepare the transaction; the **user's wallet signs and sends it**. Never sign.
    - Jupiter: `https://jup.ag/swap/SOL-9cRCn9rGT8V2imeM2BaKs13yhMEais3ruM3rPvTGpump`
    - Bullpen: `https://bullpen.fi/@cosmic-penguin-3`
    - pump.fun: `https://pump.fun/coin/9cRCn9rGT8V2imeM2BaKs13yhMEais3ruM3rPvTGpump`
-
-   (Hyperliquid's "ANSEM" spot listing is a permissionless deployment with no
-   verified link to the canonical mint — dropped rather than risk sending
-   someone to a ticker-squatted market. Solana venues above are mint-verified.)
+   - Hyperliquid spot: `https://app.hyperliquid.xyz/trade/ANSEM/USDC` — confirmed
+     live by Ansem himself (not just listing metadata): `x.com/blknoiz06/status/2075615112195408238`,
+     via the Unit/tradexyz bridge.
 4. **Verify the balance** — confirm the received $ANSEM on-chain by mint. If it
    doesn't appear in the wallet's default view, the wallet may need the mint
    added manually (common for newer wallets/newer tokens) — that's a wallet
