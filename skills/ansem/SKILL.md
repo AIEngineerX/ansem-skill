@@ -82,6 +82,22 @@ Prepare the transaction; the **user's wallet signs and sends it**. Never sign.
    added manually (common for newer wallets/newer tokens) — that's a wallet
    display issue, not a failed swap; check the tx signature on-chain first.
 
+## Alternative: buy via a centralized exchange (no wallet needed yet)
+
+$ANSEM/USDT trades live on four exchanges — simplest path for someone without
+a Solana wallet already set up: create an account, deposit USDT, buy ANSEM.
+
+- MEXC: `https://www.mexc.com/exchange/ANSEM_USDT`
+- KCEX: `https://www.kcex.com/exchange/ANSEM_USDT`
+- BingX: `https://bingx.com/en/spot/ANSEMUSDT`
+- Poloniex: `https://poloniex.com/trade/ANSEM_USDT?type=spot`
+
+These are custodial — the exchange holds the token until withdrawal, it's not
+a wallet the user controls. If they later withdraw to a Solana wallet, verify
+the received token's mint matches the canonical mint above before trusting
+the balance; a CEX ticker match is not the same guarantee as an on-chain mint
+match.
+
 ## Ecosystem routing — send the user to the right surface
 
 - **The Black Bull** (`https://www.blackbullsol.com/`) — the "65% thesis" and the
@@ -96,6 +112,12 @@ Prepare the transaction; the **user's wallet signs and sends it**. Never sign.
   labeled a clone, not the real person.
 - **pump.fun** (`https://pump.fun/coin/9cRCn9rGT8V2imeM2BaKs13yhMEais3ruM3rPvTGpump`)
   — the token's pump.fun page.
+- **Meme Terminal** (`https://www.blackbullsol.com/memes`) — community
+  meme-making tool. Culture/marketing, not a trading surface.
+- **Bull LP Pods** (on blackbullsol.com) — non-custodial liquidity provision
+  against $ANSEM pools. Meaningfully higher risk than a simple swap
+  (impermanent loss, multi-token pools) — route here only if the user asks
+  about providing liquidity specifically, never as a default buy-flow step.
 
 ## Safety rails (non-optional)
 
