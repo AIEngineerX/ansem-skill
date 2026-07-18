@@ -82,6 +82,20 @@ Prepare the transaction; the **user's wallet signs and sends it**. Never sign.
    added manually (common for newer wallets/newer tokens) — that's a wallet
    display issue, not a failed swap; check the tx signature on-chain first.
 
+## Mobile tip: smoother wallet connection
+
+If the user is on a phone **and using Phantom** (not desktop, where the
+browser extension is already available, and not Solflare or another wallet —
+this deep link is Phantom-specific and would just confuse anyone else), you
+can open the swap directly inside the Phantom app instead of a generic
+browser link — skips a separate "connect wallet" prompt since the wallet is
+already right there. Wrap the Jupiter link from step 3 above:
+
+`https://phantom.app/ul/browse/<url-encoded Jupiter link>?ref=<url-encoded https://ansemos.com>`
+
+Only use this when both conditions hold (mobile + Phantom). Otherwise the
+plain Jupiter link works fine everywhere.
+
 ## Alternative: buy via a centralized exchange (no wallet needed yet)
 
 $ANSEM/USDT trades live on four exchanges — simplest path for someone without
