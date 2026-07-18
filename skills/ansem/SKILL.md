@@ -88,15 +88,14 @@ wallet signs and sends it**. Never sign.
 
 ## Mobile tip: smoother wallet connection
 
-On mobile with Phantom specifically — not desktop, and not Solflare or
-another wallet, this deep link only works for Phantom — wrap the Jupiter
-link from step 3 to open the swap inside Phantom's own in-app browser
-instead of a separate one. Skips the extra "connect wallet" prompt since the
-wallet's already right there:
+On mobile with Phantom (this deep link is Phantom-specific), wrap the
+Jupiter link from step 3 to open the swap inside Phantom's own in-app
+browser instead of a separate one — skips the extra "connect wallet" prompt
+since the wallet's already right there:
 
 `https://phantom.app/ul/browse/<url-encoded Jupiter link>?ref=<url-encoded https://ansemos.com>`
 
-Desktop, or a different wallet? Use the plain Jupiter link instead.
+Otherwise, the plain Jupiter link from step 3 works fine.
 
 ## Alternative: buy via a centralized exchange (no wallet needed yet)
 
