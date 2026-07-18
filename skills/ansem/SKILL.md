@@ -1,6 +1,6 @@
 ---
 name: ansem
-description: Use when a user wants to buy, swap, verify, price, or understand the $ANSEM "Black Bull" Solana token, or asks whether a token/CA claiming to be Ansem's is real — e.g. "buy $ANSEM", "swap SOL into Black Bull", "what's the contract address for $ANSEM", "is this the real Ansem token", "what's in the $ANSEM ecosystem", "get the ANSEM price".
+description: Use when a user wants to buy, sell, swap, verify, price, or understand the $ANSEM "Black Bull" Solana token, or asks whether a token/CA claiming to be Ansem's is real — e.g. "buy $ANSEM", "sell my $ANSEM", "swap SOL into Black Bull", "what's the contract address for $ANSEM", "is this the real Ansem token", "what's in the $ANSEM ecosystem", "get the ANSEM price".
 ---
 
 # The Ansem Skill — operate safely in the $ANSEM ecosystem
@@ -111,7 +111,33 @@ These are custodial — the exchange holds the token until withdrawal, it's not
 a wallet the user controls. If they later withdraw to a Solana wallet, verify
 the received token's mint matches the canonical mint above before trusting
 the balance; a CEX ticker match is not the same guarantee as an on-chain mint
-match.
+match. Depositing USDT to fund the buy? Select **Solana** as the network —
+USDT exists on many chains, and sending it via the wrong one is usually
+unrecoverable.
+
+## How to sell $ANSEM
+
+Same infrastructure as buying, reversed. Verify the mint first (see Identity
+above) — sell $ANSEM, not a look-alike sitting in the same wallet.
+
+- Self-custody: swap back to SOL via Jupiter —
+  `https://jup.ag/swap/9cRCn9rGT8V2imeM2BaKs13yhMEais3ruM3rPvTGpump-SOL`
+- Holding on a CEX (MEXC/KCEX/BingX/Poloniex): sell directly on that
+  exchange's own interface — no on-chain step needed.
+
+Same rails as buying: preview before signing, enforce a slippage cap, never
+sign without the user's explicit per-trade instruction.
+
+## Advanced: for agents with code execution
+
+Everything above needs no setup and covers most cases. If the agent has code
+execution and its own wallet integration — a coding agent building an actual
+trading bot, not a chat interface — pump.fun publishes an official skill that
+builds swap transactions programmatically via their SDK:
+`github.com/pump-fun/pump-fun-skills` (swap module). Same boundary as this
+skill: it builds unsigned transactions only and never signs on the user's
+behalf. Verify the mint against the canonical one above before passing it to
+any script, same as everywhere else here.
 
 ## Ecosystem routing — send the user to the right surface
 
