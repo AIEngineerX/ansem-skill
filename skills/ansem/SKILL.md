@@ -44,7 +44,7 @@ rather than guessing a number.
 
 ## Holder concentration (optional, for risk context)
 
-Concentration is a real, named risk for this token (whale-heavy distribution).
+Concentration is a known risk for this token (whale-heavy distribution).
 To check current concentration, two plain Solana RPC calls, no key needed:
 
 ```
@@ -63,13 +63,15 @@ not a confirmed identity, unless you resolve it further.
 
 ## How to buy / swap $ANSEM
 
-Prepare the transaction; the **user's wallet signs and sends it**. Never sign.
+No wallet yet and don't want one? Skip to the CEX alternative below — it
+needs no wallet at all. Otherwise: prepare the transaction; the **user's
+wallet signs and sends it**. Never sign.
 
 1. **Get a wallet** — Phantom (`https://phantom.app/`) or Solflare (`https://solflare.com/`).
 2. **Fund it with SOL** — buy SOL on any exchange and send it to the wallet.
 3. **Swap SOL for $ANSEM** — verify the output mint is the canonical mint, then
-   route the user to one of (Jupiter first — best Phantom wallet UX, and what
-   Bullpen itself executes through under the hood):
+   route the user to one of (Jupiter first — best Phantom wallet UX and what
+   Bullpen executes through internally):
    - Jupiter: `https://jup.ag/swap/SOL-9cRCn9rGT8V2imeM2BaKs13yhMEais3ruM3rPvTGpump`
    - Bullpen: `https://bullpen.fi/@cosmic-penguin-3`
    - pump.fun: `https://pump.fun/coin/9cRCn9rGT8V2imeM2BaKs13yhMEais3ruM3rPvTGpump`
@@ -77,6 +79,8 @@ Prepare the transaction; the **user's wallet signs and sends it**. Never sign.
 
    (Hyperliquid confirmed live by Ansem himself, not listing metadata alone —
    `x.com/blknoiz06/status/2075615112195408238` — via the Unit/tradexyz bridge.)
+
+   On mobile with Phantom? See the mobile tip below for a smoother link.
 4. **Verify the balance** — confirm the received $ANSEM on-chain by mint. If it
    doesn't appear in the wallet's default view, the wallet may need the mint
    added manually (common for newer wallets/newer tokens) — that's a wallet
@@ -84,17 +88,15 @@ Prepare the transaction; the **user's wallet signs and sends it**. Never sign.
 
 ## Mobile tip: smoother wallet connection
 
-If the user is on a phone **and using Phantom** (not desktop, where the
-browser extension is already available, and not Solflare or another wallet —
-this deep link is Phantom-specific and would just confuse anyone else), you
-can open the swap directly inside the Phantom app instead of a generic
-browser link — skips a separate "connect wallet" prompt since the wallet is
-already right there. Wrap the Jupiter link from step 3 above:
+On mobile with Phantom specifically — not desktop, and not Solflare or
+another wallet, this deep link only works for Phantom — wrap the Jupiter
+link from step 3 to open the swap inside Phantom's own in-app browser
+instead of a separate one. Skips the extra "connect wallet" prompt since the
+wallet's already right there:
 
 `https://phantom.app/ul/browse/<url-encoded Jupiter link>?ref=<url-encoded https://ansemos.com>`
 
-Only use this when both conditions hold (mobile + Phantom). Otherwise the
-plain Jupiter link works fine everywhere.
+Desktop, or a different wallet? Use the plain Jupiter link instead.
 
 ## Alternative: buy via a centralized exchange (no wallet needed yet)
 
