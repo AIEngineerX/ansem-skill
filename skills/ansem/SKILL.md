@@ -159,6 +159,11 @@ any script, same as everywhere else here.
   against $ANSEM pools. Meaningfully higher risk than a simple swap
   (impermanent loss, multi-token pools) — route here only if the user asks
   about providing liquidity specifically, never as a default buy-flow step.
+- **Bull Index Vault** (on blackbullsol.com) — staking, self-described by the
+  site as **unaudited and experimental — real funds are at risk**. Status
+  (open vs. paused for audit) has shown inconsistency between checks; don't
+  state a status, tell the user to verify current status on the site
+  directly. Route here only if asked about staking, never as a default.
 
 ## Safety rails (non-optional)
 
