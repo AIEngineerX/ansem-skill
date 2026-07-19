@@ -1,6 +1,10 @@
 ---
 name: ansem
 description: Use when a user wants to buy, sell, swap, verify, price, or understand the $ANSEM "Black Bull" Solana token, or asks whether a token/CA claiming to be Ansem's is real — e.g. "buy $ANSEM", "sell my $ANSEM", "swap SOL into Black Bull", "what's the contract address for $ANSEM", "is this the real Ansem token", "what's in the $ANSEM ecosystem", "get the ANSEM price".
+license: MIT
+metadata:
+  version: "1.0"
+  author: AIEngineerX
 ---
 
 # The Ansem Skill — operate safely in the $ANSEM ecosystem
